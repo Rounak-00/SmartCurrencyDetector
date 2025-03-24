@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera App</title>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy@1.1.1/dist/webcam-easy.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: whitesmoke;">Live Camera</h1>
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="canvas" width="800" height="600"></canvas>
+
+
+        <a id="snap" href="#">SNAP</a>
+        <br>
+        <div class="file-upload">
+            <input type="file" id="upload" accept="image/jpeg">
+        </div>
+        <p id="loading" style="display:none; color: white;">Processing...</p>
+
+       <script src="{% static 'js/script.js' %}"></script>
+    </div>
+</body>
+</html>
+
