@@ -1,7 +1,12 @@
 # Currency Recognition System
 
 ## Overview
-This project is a currency recognition system built using Django for the backend and a combination of HTML, CSS, and JavaScript for the frontend. The system utilizes deep learning models trained using transfer learning and fine-tuning on VGG16, VGG19, ResNet50, and EfficientNet. The trained models are used to classify Indian currency notes and provide audio feedback for visually impaired users.
+This project is a currency recognition system built using Django for the backend and a combination of HTML, CSS, and JavaScript for the frontend. The system utilizes deep learning models trained using transfer learning and fine-tuning on VGG16, VGG19, ResNet50, and EfficientNet. The trained models are used to classify Indian currency notes and provide audio feedback for visually impaired users, making it easier for them to identify currency notes independently.
+
+The highest accuracy achieved was 97% using ResNet, which is the model being used for currency detection.
+
+## Goal
+The primary goal of this project is to **assist visually impaired individuals** in identifying Indian currency notes quickly and accurately using a deep learning-based recognition system. By integrating **audio feedback**, the system enables users to hear the denomination of the detected currency, helping them in their daily transactions without relying on others.
 
 ## Features
 - **Live Camera Capture**: Users can capture an image using their webcam.
@@ -46,7 +51,7 @@ The models were trained on Kaggle using transfer learning and fine-tuning techni
 2. **API Request**: The image is sent to the Django backend via a POST request.
 3. **Currency Detection**: The backend processes the image using `CheckCurrency.py`.
 4. **Audio Feedback**: `TextToAudio.py` converts the detected currency note's value into an audio response.
-5. **Response to Frontend**: The result is displayed, and the corresponding audio is played.
+5. **Response to Frontend**: The resultant audio is played.
 
 ## API Details
 - **Endpoint**: `POST /upload_image/`
@@ -74,7 +79,4 @@ The models were trained on Kaggle using transfer learning and fine-tuning techni
 - Improve accuracy with additional training data.
 - Deploy the system for real-time mobile application use.
 - Implement support for multiple currencies.
-
-## Author
-**Rounak** 🚀
 
