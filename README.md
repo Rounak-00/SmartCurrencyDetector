@@ -17,7 +17,7 @@ The primary goal of this project is to **assist visually impaired individuals** 
 ## Tech Stack
 - **Backend**: Django (Python)
 - **Frontend**: HTML, CSS, JavaScript
-- **Machine Learning**: Transfer Learning & Fine-tuning (VGG16, VGG19, ResNet50, EfficientNet)
+- **Machine Learning**: Tensorflow, Keras, Transfer Learning & Fine-tuning (VGG16, VGG19, ResNet50, EfficientNet)
 - **API Communication**: JavaScript (POST request to Django backend)
 
 ## Directory Structure
@@ -54,8 +54,8 @@ The models were trained on Kaggle using transfer learning and fine-tuning techni
 5. **Response to Frontend**: The resultant audio is played.
 
 ## API Details
-- **Endpoint**: `POST /upload_image/`
-- **Handled in**: `urls.py -> upload_image in views.py`
+- **Endpoint**: `POST /upload/`
+- **Handled in**: `urls.py -> upload in views.py`
 - **Request Body**: FormData containing the uploaded image
 - **Response**: JSON with detected currency and an audio response
 
